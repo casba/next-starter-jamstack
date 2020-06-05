@@ -3,6 +3,20 @@ import Head from 'next/head'
 
 const Home = () => (
   <div>
+    <Head>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-168655197-1"></script>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+          
+            gtag('config', 'UA-168655197-1');
+          `
+        }}
+      />
+    </Head>
     <h1>Services That Are Hard to Unsubscribe From.</h1>
 
     <h3>NYTimes makes it hard to unsubscribe.</h3>
